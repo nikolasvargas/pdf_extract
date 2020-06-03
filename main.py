@@ -8,7 +8,7 @@ from typing import Dict, List
 
 AUTO_REFRACTION_RESULTS = slice(1,4)
 KERATOMETRY_RESULTS = slice(5,11)
-PATITENT_DATA = slice(11,14)
+PATIENT_DATA = slice(11,14)
 
 def extract_results() -> Dict[str, Dict[str, str]]:
     raw: Dict[str, str] = parser.from_file("vv.pdf")
@@ -50,5 +50,5 @@ def index() -> Dict[str, Dict[str, str]]:
     return extract_results()
 
 if __name__ == '__main__':
-    app.run(host='143.54.126.168', port=8080)
+    app.run(host='127.0.0.1', port=8080)
 
